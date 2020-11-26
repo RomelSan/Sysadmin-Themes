@@ -36,7 +36,3 @@ Check file `README.md` inside `PowerLine for Powershell` folder.
 https://github.com/RomelSan
 ### My Gist
 https://gist.github.com/RomelSan
-
-## Todo
-* Readme file for "Windows Terminal"
-* Readme file for "ZSH"
