@@ -18,7 +18,7 @@ You can detach a session on one computer, go home, and log in to the remote comp
 `tmux attach-session -t terminalName`
 
 ## Ctrl+B Cheat Sheet
-
+Press Ctrl+B and other key to:
 ### Session Commands
 * S: List sessions.
 * $: Rename current session.
@@ -48,13 +48,6 @@ You can detach a session on one computer, go home, and log in to the remote comp
 
 ### Pane Stuff
 * t: prefix + t Show the current time in a tmux pane, to dismiss press Esc key.
-
-## Article Credits
-https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/amp/
-
-## Resources
-https://github.com/rothgar/awesome-tmux  
-https://github.com/jimeh/tmux-themepack
 
 ---
 
@@ -104,10 +97,22 @@ setw -g clock-mode-colour cyan
 set -wg mode-style bg=blue,fg=white
 ```
 
+## Set up tmux so that it starts up with specified windows opened
+Check the file "Setup Tmux to open with panes.md".
+
 ---
 
 ## Test powerline font icons
 `echo -e "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"`
+
+---
+
+## Article Credits
+https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/amp/
+
+## Resources
+https://github.com/jimeh/tmux-themepack  
+https://github.com/rothgar/awesome-tmux
 
 ---
 

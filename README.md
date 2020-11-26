@@ -4,7 +4,7 @@ Customize your shells & terminals.
 ## Apps
 screen, tmux and zsh are for Linux.  
 Kitty, Windows Terminal and Fonts are for Windows.  
-Inside "Windows Terminal" folder there is the PowerLine for Powershell.
+Inside "Windows Terminal" folder there is the PowerLine for Powershell. 
 
 ## Instructions
 
@@ -32,7 +32,16 @@ If you are going powerline then at the end apply the Nord Theme `tmux-nord-v2-po
 1. Install Oh-my-posh.  
 Check file `README.md` inside `PowerLine for Powershell` folder.
 
-## My Github
+## My Github Repo
 https://github.com/RomelSan
-### My Gist
+### My Gist Repo
 https://gist.github.com/RomelSan
+
+---
+
+## Preview
+Kitty Portable with Nord Theme
+![Linux](./tmux/screenshot2.png?raw=true)   
+
+Windows Terminal
+![Windows](./Windows%20Terminal/Themes/Umbrella/screens/Screen01.png?raw=true)  
