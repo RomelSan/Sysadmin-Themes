@@ -1,0 +1,18 @@
+https://putty.org.ru/themes/index.html
+
+Notes:
+Keep in mind that some colors are not visible under dark themes.
+
+To test the theme then do this inside a SSH connection using Kitty.
+```
+whiptail --yesno Hello 10 50 --title TitleBox --backtitle BackTitle
+mc
+htop
+top
+```
+Test each of those commands and take a look at the colors and text.
+I suggest to do this first on a default settings without customizations so you can compare.
+
+
+---
+* If you are building your own theme then you can use the file 'ansi.sh' to print out the color map.

@@ -1,0 +1,14 @@
+* Windows Terminal includes these color schemes inside the defaults.json file, 
+  which can be accessed by holding ALT when clicking settings button.
+
+* Built-in color schemes:
+  Campbell
+  Campbell Powershell
+  Vintage
+  One Half Dark
+  One Half Light
+  Tango Dark
+  Tango Light
+  Solarized Dark
+  Solarized Light
+

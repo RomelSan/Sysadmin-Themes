@@ -1,0 +1,29 @@
+# Windows Terminal Profiles
+## Creating profile
+1. Click Settings.   
+![Demo 01](./screenshot.png?raw=true)  
+
+The settings are in Json format.
+
+2. Creating a named `cmd` profile with a custom font and theme 
+```json
+{
+    "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+    "name": "cmd",
+    "commandline": "cmd.exe",
+    "tabTitle": "Command Prompt",
+    "colorScheme" : "One Half Dark",
+    "fontFace": "Cascadia Code PL",
+    "fontSize" : 11,
+    "hidden": false
+},
+```
+
+In your code editor should look like:  
+![Demo 02](./screenshot-code.png?raw=true)
+
+Note: The last profile the one at the bottom, should not have a "`,`" comma at the end.
+
+3. For examples check files: `Windows Terminal Settings Example.json` and check inside Themes folder.
+
+4. If you want to install PowerLine for Powershell then check the file `README.md` inside the folder `PowerLine for Powershell`.
