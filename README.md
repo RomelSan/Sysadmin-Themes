@@ -8,11 +8,23 @@ Inside "Windows Terminal" folder there is the PowerLine for Powershell.
 
 ## Instructions
 
+### **Fonts**
+This is a must to make sure the themes works as intended.  
+If you are goint to use Powershell themes then install a PowerLine Font.  
+If you are going to use Oh My ZSH (Linux) and/or Oh my Posh (Powershell) then use Nerd Fonts because they have PowerLine Symbols + some required extras.
+1. Install a PowerLine font, ex: `CascadiaCodePL.ttf` located in folder `Fonts --> PowerLine` folder.
+2. If you want to use a [Nerd Font](https://www.nerdfonts.com/):  
+   Located in folder `Fonts --> NerdFonts` folder.  
+   My favorites are: `CascadiaCode` and `SourceCodePro`     
+   The fonts to install are:  
+   `Caskaydia Cove Nerd Font Complete Windows Compatible.ttf`  
+   `Sauce Code Pro Nerd Font Complete Windows Compatible.ttf`  
+
+
 ### Customizing Kitty
 Using Kitty portable on Windows.
-1. Install a font, ex: `CascadiaCodePL.ttf` located in the Fonts --> PowerLine folder.
-2. Do the Kitty portable recommended settings. Open File `README.md` inside Kitty folder.
-3. Use any Kitty theme you want. My favorites are: Nord Theme and Core Theme.
+1. Do the Kitty portable recommended settings. Open File `README.md` inside Kitty folder.
+2. Use any Kitty theme you want. My favorites are: Nord Theme and Core Theme.
 
 ### Customizing Linux Shell
 Tested on Ubuntu Server 20.04 LTS
@@ -22,19 +34,23 @@ If you are going powerline then at the end apply the Nord Theme `tmux-nord-v2-po
 3. Optional.- Do ZSH. `inside ZSH folder` file `README.md`
 
 ### Customizing Windows Terminal
-1. Install a font, ex: `CascadiaCodePL.ttf` located in folder `Fonts --> PowerLine` folder.
-2. To build a Windows Terminal profile, open Settings in the app and create one. Check the example file `Windows Terminal Settings Example.json`.
-* Check Windows Terminal Themes folder if you are going to use Umbrella theme.
-3. Add "open here context", inside folder `Windows Terminal\Open Here Context` file `README.md`.
-4. Check file `Windows Terminal Shortcuts.md`
+1. To build a Windows Terminal profile, open Settings in the app and create one. Check the example file `Windows Terminal Settings Example.json`.
+* Check "Windows Terminal/Themes" folder if you are going to use a theme like Umbrella theme or Nord theme.
+2. Add "open here context", inside folder `Windows Terminal\Open Here Context` file `README.md`.
+3. Check file `Windows Terminal Shortcuts.md`
 
-### PowerShell
+### PowerShell - Oh my Posh
 1. Install Oh-my-posh.  
 Check file `README.md` inside `PowerLine for Powershell` folder.
 
-## My Github Repo
-https://github.com/RomelSan
-### My Gist Repo
+## Testing Themes Fonts and Colors
+Check the the file `README.md` in `Testing` folder.
+
+## Extras
+[LSD](https://github.com/Peltoche/lsd) - Beautifies the terminal's ls command, with color and font-awesome icons.
+
+## My Repos
+https://github.com/RomelSan  
 https://gist.github.com/RomelSan
 
 ---

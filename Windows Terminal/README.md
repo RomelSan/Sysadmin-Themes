@@ -27,3 +27,6 @@ Note: The last profile the one at the bottom, should not have a "`,`" comma at t
 3. For examples check files: `Windows Terminal Settings Example.json` and check inside Themes folder.
 
 4. If you want to install PowerLine for Powershell then check the file `README.md` inside the folder `PowerLine for Powershell`.
+
+## Links
+Download External Themes: https://windowsterminalthemes.dev/
