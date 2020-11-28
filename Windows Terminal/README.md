@@ -30,3 +30,4 @@ Note: The last profile the one at the bottom, should not have a "`,`" comma at t
 
 ## Links
 Download External Themes: https://windowsterminalthemes.dev/
+MultiPort Themes: https://github.com/mbadolato/iTerm2-Color-Schemes

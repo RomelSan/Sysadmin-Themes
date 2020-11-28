@@ -1,7 +1,7 @@
 # Nord Theme
 This patched edition should work with mc.  
 Letters are visible.  
-Changed 2 colors.
+Changed 2 colors: brightGreen: #A3BE8C, brightPurple: #B48EAD
 
 ## List Entry
 ```json
@@ -41,8 +41,6 @@ Changed 2 colors.
             "brightBlue": "#81A1C1",
             "brightPurple": "#b860a8",
             "brightCyan": "#88C0D0",
-			// "brightCyan": "#8FBCBB",
             "brightWhite": "#E5E9F0"
-			// "brightWhite": "#ECEFF4"
         },
 ```

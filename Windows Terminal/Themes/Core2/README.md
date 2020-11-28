@@ -31,7 +31,7 @@ Theme preview:
             "blue": "#3f54cd",
             "purple": "#cb65fa",
             "cyan": "#7da4f8",
-            "white": "#f5e2be",
+            "white": "#dcdccc",
             "brightBlack": "#696969",
             "brightRed": "#ff5555",
             "brightGreen": "#55ff55",

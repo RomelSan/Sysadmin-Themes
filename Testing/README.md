@@ -1,9 +1,9 @@
 # Testing Themes and Fonts
 ## Printing color schema
-Use the file `ansi.sh` in linux.
+Use the file `screenshotTable.sh` in linux.
 ```
-chmod +x ansi.sh
-./ansi.sh
+chmod +x screenshotTable.sh
+./screenshotTable.sh
 ```
 Use the file `win10colors.cmd` in Windows Terminal CMD profile.
 

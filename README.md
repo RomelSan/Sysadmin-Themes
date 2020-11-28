@@ -47,7 +47,12 @@ Check file `README.md` inside `PowerLine for Powershell` folder.
 Check the the file `README.md` in `Testing` folder.
 
 ## Extras
-[LSD](https://github.com/Peltoche/lsd) - Beautifies the terminal's ls command, with color and font-awesome icons.
+[LSD](https://github.com/Peltoche/lsd) - Beautifies the terminal's ls command, with color and font-awesome icons.  
+MOTD - Customize Login Message.
+
+## Multiports
+Theme Ports for Terminal, Konsole, XRDB, Terminator, etc. Visit:  
+[mbadolato iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
 
 ## My Repos
 https://github.com/RomelSan  
