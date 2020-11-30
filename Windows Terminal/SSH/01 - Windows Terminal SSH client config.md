@@ -67,6 +67,13 @@ To debug your setup run SSH in verbose mode to see the settings that are applied
 Change the commandline value to  
 `"commandline" : "ssh me@my-server -p 22 -i ~/.ssh/id_rsa"`
 
+### Paths on Windows
+If you have spaces in the folder name or in the file name then you have to use escaped quotes:  
+`\"Long Path\\Here\\My File.key\"`  
+
+The OpenSSH ssh is **nix application**, so **nix** rules apply when parsing its command-line, ex:  
+`"commandline" : "ssh user@ipaddress -p 22 -i \"C:\\folder path\\myKey.key\""`
+
 ## Port Forward
 Forward SOCKS proxy.  
 
