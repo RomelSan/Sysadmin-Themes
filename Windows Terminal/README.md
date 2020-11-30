@@ -28,6 +28,9 @@ Note: The last profile the one at the bottom, should not have a "`,`" comma at t
 
 4. If you want to install PowerLine for Powershell then check the file `README.md` inside the folder `PowerLine for Powershell`.
 
+## Extras
+You can check advanced SSH settings inside the `SSH` folder.
+
 ## Links
-Download External Themes: https://windowsterminalthemes.dev/
+Download External Themes: https://windowsterminalthemes.dev/  
 MultiPort Themes: https://github.com/mbadolato/iTerm2-Color-Schemes

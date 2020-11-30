@@ -46,7 +46,7 @@ Check file `README.md` inside `PowerLine for Powershell` folder.
 ## Testing Themes Fonts and Colors
 Check the the file `README.md` in `Testing` folder.
 
-## Extras
+## Extras (in extras folder)
 [LSD](https://github.com/Peltoche/lsd) - Beautifies the terminal's ls command, with color and font-awesome icons.  
 MOTD - Customize Login Message.
 
