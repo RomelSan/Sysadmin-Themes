@@ -53,3 +53,14 @@ UsePAM no
 ```
 Once you are done, save the file and restart the SSH service by typing:  
 `sudo systemctl restart ssh`
+
+--- 
+# Optional
+## Only allow incoming ED25519 sessions:
+Put the lines at the end of the file `sshd_config`.  
+`sudo nano /etc/ssh/sshd_config`
+```
+CASignatureAlgorithms ssh-ed25519
+HostbasedAcceptedKeyTypes ssh-ed25519
+PubkeyAcceptedKeyTypes ssh-ed25519-cert-v01@openssh.com,ssh-ed25519
+```
