@@ -18,6 +18,8 @@ Now that you generated your SSH key pair, the next step is to copy the **public 
 
 `ssh-copy-id -i /home/yourusername/.ssh/ssh_host_ed25519_key.pub myUser@myHost`  
 
+Once the user is authenticated, the public key `~/.ssh/ssh_host_ed25519_key.pub` will be appended to the remote user `~/.ssh/authorized_keys` file, and the connection will be closed.
+
 ### If you don't have ssh-copy-id
 If by some reason the `ssh-copy-id` utility is not available on your local computer, you can use the following command to  
 
@@ -64,3 +66,11 @@ CASignatureAlgorithms ssh-ed25519
 HostbasedAcceptedKeyTypes ssh-ed25519
 PubkeyAcceptedKeyTypes ssh-ed25519-cert-v01@openssh.com,ssh-ed25519
 ```
+
+---
+## For reference only - Client Login
+### Add your newly generated Ed25519 private key to SSH agent
+`ssh-add ~/.ssh/id_ed25519`
+
+### Specifying Specific Key to SSH into a Remote Server
+`ssh -i ~/.ssh/id_ed25519 core@192.168.1.1`
