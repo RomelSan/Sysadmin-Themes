@@ -45,7 +45,7 @@ For example:
 ```
 ZSH_THEME="fino"
 ```
-My favorites themes are: Fino, Funky, Josh, mikeh, tjkirch
+My favorites themes are: fino, funky, josh, mikeh, tjkirch
 
 # **Optional (Advanced Looks)**
 ## **Using Patched Fonts**
