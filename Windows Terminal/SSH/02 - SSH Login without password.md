@@ -51,7 +51,7 @@ Search for the following directives and modify as it follows:
 ```conf
 PasswordAuthentication no
 ChallengeResponseAuthentication no
-UsePAM no
+PubkeyAuthentication yes
 ```
 Once you are done, save the file and restart the SSH service by typing:  
 `sudo systemctl restart ssh`
