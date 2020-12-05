@@ -45,7 +45,11 @@ For example:
 ```
 ZSH_THEME="fino"
 ```
-My favorites themes are: fino, funky, josh, mikeh, tjkirch
+My favorites themes are: fino, funky, josh, mikeh, darkblood, tjkirch, gnzh
+
+### Testing Theme
+If you are changing the theme then you can reload the shell with:  
+`source ~/.zshrc`
 
 # **Optional (Advanced Looks)**
 ## **Using Patched Fonts**
