@@ -74,3 +74,10 @@ PubkeyAcceptedKeyTypes ssh-ed25519-cert-v01@openssh.com,ssh-ed25519
 
 ### Specifying Specific Key to SSH into a Remote Server
 `ssh -i ~/.ssh/id_ed25519 core@192.168.1.1`
+
+### Get SSH connection data
+Such as encryption data, connection data, debug info.  
+`ssh -vv user@host`  
+
+or with key:  
+`ssh -vv -i ~/.ssh/id_ed25519 core@192.168.1.1`
