@@ -72,7 +72,7 @@ PubkeyAcceptedKeyTypes ssh-ed25519-cert-v01@openssh.com,ssh-ed25519
 ### Add your newly generated Ed25519 private key to SSH agent
 `ssh-add ~/.ssh/id_ed25519`
 
-### Specifying Specific Key to SSH into a Remote Server
+### SSH into a Remote Server using a Key
 `ssh -i ~/.ssh/id_ed25519 core@192.168.1.1`
 
 ### Get SSH connection data
