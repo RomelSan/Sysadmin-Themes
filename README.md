@@ -61,7 +61,7 @@ https://gist.github.com/RomelSan
 ---
 
 ## Preview
-Kitty Portable with Nord Theme
+Kitty Portable with Nord Theme, Oh My ZSH with mikeh theme
 ![Linux](./tmux/screenshot2.png?raw=true)   
 
 Windows Terminal

@@ -45,7 +45,7 @@ Changed some colors, originals:
             "brightGreen": "#b4d895",
             "brightYellow": "#EBCB8B",
             "brightBlue": "#81A1C1",
-            "brightPurple": "#a336c4",
+            "brightPurple": "#cc9fda",
             "brightCyan": "#88C0D0",
             "brightWhite": "#E5E9F0"
         },
