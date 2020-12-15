@@ -6,7 +6,7 @@ Set Private key permissions to owner only.
 You can do this using the GUI or using the Command Prompt.  
 In CMD:
 ```bat
- :: # Remove Inheritance ::
+:: # Remove Inheritance ::
 Icacls private.key /c /t /Inheritance:d
 
 :: # Set Ownership to Owner ::

@@ -53,8 +53,8 @@ PasswordAuthentication no
 ChallengeResponseAuthentication no
 PubkeyAuthentication yes
 ```
-Once you are done, save the file and restart the SSH service by typing:  
-`sudo systemctl restart ssh`
+Once you are done, save the file and restart the SSHd service by typing:  
+`sudo systemctl restart sshd`
 
 --- 
 # Optional

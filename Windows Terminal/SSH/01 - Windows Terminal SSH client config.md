@@ -91,6 +91,5 @@ Host example.com
 To use an IPv6 address enclose the address in square brackets:  
 `[2001:0db8:85a3:0000:0000:8a2e:0370:7334]:8080`
 
-
 ## Article Credits
 https://shapeshed.com/manage-ssh-connections-with-a-ssh-config-file/
