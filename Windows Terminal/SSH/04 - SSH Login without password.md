@@ -50,22 +50,44 @@ Open the SSH configuration file `/etc/ssh/sshd_config`
 Search for the following directives and modify as it follows:
 ```conf
 PasswordAuthentication no
+PermitEmptyPasswords no
 ChallengeResponseAuthentication no
 PubkeyAuthentication yes
 ```
 Once you are done, save the file and restart the SSHd service by typing:  
 `sudo systemctl restart sshd`
 
-### Optional: Adding 2FA + Pubkey = MFA
+### Optional: Adding 2FA + Pubkey + Password = MFA
+Making SSH Aware of MFA  
+`sudo nano /etc/ssh/sshd_config`
+
 ```
 PubkeyAuthentication yes
 PasswordAuthentication no
-AuthenticationMethods publickey,keyboard-interactive:pam
-KbdInteractiveAuthentication yes
+PermitEmptyPasswords no
+AuthenticationMethods publickey,password publickey,keyboard-interactive
 UsePAM yes
 ```
 
---- 
+**If you don't want to be asked for the password** then edit the file `/etc/pam.d/sshd`   
+open the PAM `sshd` configuration file.
+
+```bash
+sudo nano /etc/pam.d/sshd
+```
+Find the line `@include common-auth` and comment it out by adding a `#` character as the first character on the line. This tells PAM not to prompt for a password.
+```bash
+. . .
+# Standard Un*x authentication.
+#@include common-auth
+. . .
+```
+Save and close the file, then restart SSH.
+```bash
+sudo systemctl restart sshd.service
+```
+
+---
 
 # Optional
 ## Only allow incoming ED25519 sessions:
@@ -84,11 +106,16 @@ If you are using SSH agent then you must add the private key.
 `ssh-add ~/.ssh/id_ed25519`
 
 ### SSH into a Remote Server using a Key
-`ssh -i ~/.ssh/id_ed25519 core@192.168.1.1`
+`ssh -i ~/.ssh/id_ed25519 username@192.168.1.1`
 
 ### Get SSH connection data
 Such as encryption data, connection data, debug info.  
 `ssh -vv user@host`  
 
 or with key:  
-`ssh -vv -i ~/.ssh/id_ed25519 core@192.168.1.1`
+`ssh -vv -i ~/.ssh/id_ed25519 username@192.168.1.1`
+
+---
+
+### Credits
+[Digitalocean - SSH MFA](https://www.digitalocean.com/community/tutorials/how-to-set-up-multi-factor-authentication-for-ssh-on-ubuntu-20-04)
