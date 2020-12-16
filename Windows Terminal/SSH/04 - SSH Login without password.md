@@ -56,7 +56,17 @@ PubkeyAuthentication yes
 Once you are done, save the file and restart the SSHd service by typing:  
 `sudo systemctl restart sshd`
 
+### Optional: Adding 2FA + Pubkey = MFA
+```
+PubkeyAuthentication yes
+PasswordAuthentication no
+AuthenticationMethods publickey,keyboard-interactive:pam
+KbdInteractiveAuthentication yes
+UsePAM yes
+```
+
 --- 
+
 # Optional
 ## Only allow incoming ED25519 sessions:
 Put the lines at the end of the file `sshd_config`.  
@@ -70,6 +80,7 @@ PubkeyAcceptedKeyTypes ssh-ed25519-cert-v01@openssh.com,ssh-ed25519
 ---
 ## For reference only - Client Login
 ### Add your newly generated Ed25519 private key to SSH agent
+If you are using SSH agent then you must add the private key.  
 `ssh-add ~/.ssh/id_ed25519`
 
 ### SSH into a Remote Server using a Key

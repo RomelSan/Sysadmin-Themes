@@ -37,11 +37,17 @@ Note: be wary that Ctrl + C can terminate a Linux application, so using Shift is
 Settings are accessed from the drop-down menu or Ctrl + , (comma).  
 The configuration is defined in a single settings.json file
 
-## Open from CMD
-Open Windows Terminal with the Ubuntu and Windows Powershell tabs:  
-wt -p "Ubuntu" ; new-tab -p "Windows PowerShell"
+---
 
-Open Windows Terminal with the Ubuntu, Windows Powershell, and Command Prompt profiles in separate panes:  
-wt -p "Ubuntu" ; split-pane -V -p "Windows PowerShell" ; split-pane -H -p "Command Prompt"
+## Open Windows Terminal From CMD or Address Bar
+### Open current directory
+`wt -d .`
 
+### Open current directory using cmd profile.
+`wt -p "Command Prompt" -d .`
 
+### Open Windows Terminal with the Ubuntu and Windows Powershell tabs:  
+`wt -p "Ubuntu" ; new-tab -p "Windows PowerShell"`
+
+### Open Windows Terminal with the Ubuntu, Windows Powershell, and Command Prompt profiles in separate panes:  
+`wt -p "Ubuntu" ; split-pane -V -p "Windows PowerShell" ; split-pane -H -p "Command Prompt"`
