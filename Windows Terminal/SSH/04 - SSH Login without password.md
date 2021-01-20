@@ -1,6 +1,6 @@
 # SSH Login without Password
 
-## Creating SSH keys on Ubuntu 20.04
+## 1. Creating SSH keys on Ubuntu 20.04
 Generate keys on client.
 
 ### RSA
@@ -13,7 +13,7 @@ If you don't want to add a comment then skip the argument `-C "your_email@domain
 ### ED25519
 `sudo ssh-keygen -t ed25519 -h -f /home/yourusername/.ssh/ssh_host_ed25519_key`
 
-## Copy the Public Key to the Server
+## 2. Copy the Public Key to the Server
 Now that you generated your SSH key pair, the next step is to copy the **public key** to the server you want to manage.  
 
 `ssh-copy-id -i /home/yourusername/.ssh/ssh_host_ed25519_key.pub myUser@myHost`  
@@ -35,11 +35,11 @@ type myKey.pub | ssh {IP-ADDR-OR-FQDN} "cat >> .ssh/authorized_keys"
 
 ---
 
-## Login to your server using SSH keys
+## 3. Login to your server using SSH keys
 You must use your **private key** on your client to connect to the remote server.  
 `ssh -i /home/yourusername/.ssh/ssh_host_ed25519_key user@host`
 
-## Disabling SSH Password Authentication
+## 4. Disabling SSH Initial Password Authentication
 Disabling the password authentication adds an extra layer of security to your server.  
 
 Before disabling SSH password authentication, make sure you can log in to your server without a password, and the user you are logging in with has sudo privileges.  
@@ -56,6 +56,8 @@ PubkeyAuthentication yes
 ```
 Once you are done, save the file and restart the SSHd service by typing:  
 `sudo systemctl restart sshd`
+
+---
 
 ### Optional: Adding 2FA + Pubkey + Password = MFA
 Making SSH Aware of MFA  
@@ -80,6 +82,38 @@ Find the line `@include common-auth` and comment it out by adding a `#` characte
 . . .
 # Standard Un*x authentication.
 #@include common-auth
+. . .
+```
+Save and close the file, then restart SSH.
+```bash
+sudo systemctl restart sshd.service
+```
+
+---
+
+### Alternative: Pubkey + Password
+Use publickey and then ask for user password.  
+`sudo nano /etc/ssh/sshd_config`
+```
+PubkeyAuthentication yes
+PasswordAuthentication no
+PermitEmptyPasswords no
+AuthenticationMethods publickey,password publickey,keyboard-interactive
+UsePAM yes
+```
+open the PAM `sshd` configuration file.
+```bash
+sudo nano /etc/pam.d/sshd
+```
+Find the line `auth required pam_google_authenticator.so` and comment it out by adding a `#` character as the first character on the line. This tells PAM not to ask for TOTP.  
+If you can't find the line then just make sure you have the line `@include common-auth`
+```bash
+. . .
+# Standard Un*x authentication.
+@include common-auth
+
+# One-time password authentication via Google Authenticator
+# auth required pam_google_authenticator.so
 . . .
 ```
 Save and close the file, then restart SSH.
