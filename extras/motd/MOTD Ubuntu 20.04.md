@@ -42,3 +42,36 @@ _`| / __`| / __`| / __`| / .-^  ___
                            (192.168.0.2)
                             --- My Nickname
 ```
+
+
+
+---
+
+## Disabling Motd News
+
+Disabling the news part (the pingback to canonical) is simple. Edit the following file:
+
+`vim /etc/default/motd-news`
+
+Change `ENABLED=1` to `ENABLED=0`
+
+That's it for the small news part. If you don't want to see the other messages you need to disable those as well.
+
+```bash
+chmod -x /etc/update-motd.d/80-livepatch
+chmod -x /etc/update-motd.d/51-cloudguest
+chmod -x /etc/update-motd.d/10-help-text
+```
+
+#### Disabling dynamic motd entirely
+
+```bash
+sudo systemctl list-unit-files | grep motd
+
+sudo systemctl disable motd-news.timer
+sudo systemctl disable motd-news.service
+sudo systemctl stop motd-news.service
+```
+
+reboot and done.
+
