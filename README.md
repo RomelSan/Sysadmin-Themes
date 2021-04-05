@@ -10,8 +10,9 @@ Inside "Windows Terminal" folder there is the PowerLine for Powershell.
 
 ### **Fonts**
 This is a must to make sure the themes works as intended.  
-If you are goint to use Powershell themes then install a PowerLine Font.  
+If you are going to use Powershell themes then install a PowerLine Font.  
 If you are going to use Oh My ZSH (Linux) and/or Oh my Posh (Powershell) then use Nerd Fonts because they have PowerLine Symbols + some required extras.
+
 1. Install a PowerLine font, ex: `CascadiaCodePL.ttf` located in folder `Fonts --> PowerLine` folder.
 2. If you want to use a [Nerd Font](https://www.nerdfonts.com/):  
    Located in folder `Fonts --> NerdFonts` folder.  

@@ -6,7 +6,7 @@ Theme preview:
 ```json
             {
                 "name": "SSH Central",
-                "icon" : "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "icon": "🖥",
                 "tabTitle" : "Central",
                 "suppressApplicationTitle": true, 
                 "hidden": false,
@@ -15,6 +15,7 @@ Theme preview:
                 "colorScheme" : "Nord",
                 "fontFace": "CaskaydiaCove NF",
                 "fontSize" : 11,
+                "cursorShape": "bar",
                 "historySize" : 9001             
             },
 ```
@@ -40,8 +41,8 @@ Theme preview:
             "brightBlue": "#81A1C1",
             "brightPurple": "#B48EAD",
             "brightCyan": "#88C0D0",
-			// "brightCyan": "#8FBCBB",
-            "brightWhite": "#E5E9F0"
-			// "brightWhite": "#ECEFF4"
+            "brightWhite": "#E5E9F0",
+            "cursorColor": "#D8DEE9",
+            "selectionBackground": "#D8DEE9"
         },
 ```

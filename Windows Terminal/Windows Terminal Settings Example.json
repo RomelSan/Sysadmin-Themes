@@ -219,18 +219,20 @@
             "red": "#BF616A",
             "green": "#A3BE8C",
             "yellow": "#EBCB8B",
-            "blue": "#4f8ece",
+            "blue": "#81A1C1",
             "purple": "#B48EAD",
-            "cyan": "#68b8ce",
+            "cyan": "#88C0D0",
             "white": "#E5E9F0",
             "brightBlack": "#4C566A",
             "brightRed": "#BF616A",
-            "brightGreen": "#b4d895",
+            "brightGreen": "#A3BE8C",
             "brightYellow": "#EBCB8B",
             "brightBlue": "#81A1C1",
-            "brightPurple": "#cc9fda",
+            "brightPurple": "#B48EAD",
             "brightCyan": "#88C0D0",
-            "brightWhite": "#E5E9F0"
+            "brightWhite": "#E5E9F0",
+            "cursorColor": "#D8DEE9",
+            "selectionBackground": "#D8DEE9"
         },
         {
             "name": "Core2",
@@ -274,5 +276,19 @@
         // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
         // To learn more about panes, visit https://aka.ms/terminal-panes
         { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
+    ],
+    
+    "keybindings": 
+    [
+		// Command Palette Crtl+Shift+P
+        {
+            "command":
+            {
+                "action": "wt",
+                "commandline": "new-tab -p \"Windows PowerShell\" ; split-pane -p \"Command Prompt\""
+                // "commandline": "new-tab -p \"Powershell\" -d c:\\SourceCode\\MyServerCode ; split-pane -p \"Powershell\" -d c:\\SourceCode\\MyClientCode"
+            },
+            "name": "👀 Development"
+        }
     ]
 }
