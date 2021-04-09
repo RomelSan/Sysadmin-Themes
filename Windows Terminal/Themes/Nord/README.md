@@ -15,7 +15,7 @@ Theme preview:
                 "colorScheme" : "Nord",
                 "fontFace": "CaskaydiaCove NF",
                 "fontSize" : 11,
-                "cursorShape": "bar",
+                "cursorShape": "filledBox",
                 "historySize" : 9001             
             },
 ```

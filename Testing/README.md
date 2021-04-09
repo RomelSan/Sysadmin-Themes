@@ -27,3 +27,11 @@ Use the file `test-fonts.sh` in linux.
 chmod +x test-fonts.sh
 ./test-fonts.sh
 ```
+
+## Check Linux Terminal
+Test red color (must be red):  
+`print -P '%F{#ff0000}red%f'`  
+Check Colors (must return 256):  
+`print $terminfo[colors]`  
+Check Locale (must have UTF-8):  
+`locale -a`

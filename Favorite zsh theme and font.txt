@@ -10,3 +10,6 @@ https://www.nerdfonts.com
 * Best Normal Font
 Cascadia Code PL
 https://github.com/microsoft/cascadia-code
+
+* Best Windows Terminal Theme
+Nord, Core2, Neutron, One Half Dark

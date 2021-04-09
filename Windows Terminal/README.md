@@ -15,6 +15,7 @@ The settings are in Json format.
     "colorScheme" : "One Half Dark",
     "fontFace": "Cascadia Code PL",
     "fontSize" : 11,
+    "historySize" : 9001,
     "hidden": false
 },
 ```

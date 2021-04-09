@@ -20,7 +20,7 @@ If you are going to use Oh My ZSH (Linux) and/or Oh my Posh (Powershell) then us
    The fonts to install are:  
    `Caskaydia Cove Nerd Font Complete Windows Compatible.ttf`  
    `Sauce Code Pro Nerd Font Complete Windows Compatible.ttf`  
-
+   If you are not using Windows Terminal then i suggest to install the Mono Font version.
 
 ### Customizing Kitty
 Using Kitty portable on Windows.
@@ -31,7 +31,7 @@ Using Kitty portable on Windows.
 Tested on Ubuntu Server 20.04 LTS
 1. Do **screen** settings. `Inside screen folder`
 2. Do **tmux** settings. `Inside tmux folder`.  
-If you are going powerline then at the end apply the Nord Theme `tmux-nord-v2-powerline.conf` as `.tmux.conf`
+If you are going powerline then at the end apply the Nord Theme `tmux-nord-v2-powerline.conf` save as `.tmux.conf` inside your home folder.
 3. Optional.- Do ZSH. `inside ZSH folder` file `README.md`
 
 ### Customizing Windows Terminal
