@@ -11,6 +11,7 @@ Theme preview:
                 "suppressApplicationTitle": true, 
                 "hidden": false,
                 "commandline": "ssh core@10.6.6.3",
+                "bellStyle": "visual",
                 "closeOnExit" : false,
                 "colorScheme" : "Nord",
                 "fontFace": "CaskaydiaCove NF",

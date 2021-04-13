@@ -75,6 +75,9 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u
 # Bind F11 and F12 (NOT F1 and F2) to previous and next screen window
 bindkey -k F1 prev
 bindkey -k F2 next
+
+# If problem with Tab Autocompletion uncomment line below:
+# defshell -bash
 ```
 
 ## Basic Linux Screen Usage

@@ -12,10 +12,12 @@ Theme preview:
                 "suppressApplicationTitle": true, 
                 "hidden": false,
                 "commandline": "ssh core@10.6.6.3",
+                "bellStyle": "visual",
                 "closeOnExit" : false,
                 "colorScheme" : "Core2",
                 "fontFace": "CaskaydiaCove NF",
                 "fontSize" : 11,
+                "cursorShape": "filledBox",
                 "historySize" : 9001             
             },
 ```
@@ -41,6 +43,8 @@ Theme preview:
             "brightCyan": "#ffd700",
             "brightWhite": "#ffffff",
             "background": "#333333",
-            "foreground": "#ffffff"  
+            "foreground": "#ffffff",
+            "cursorColor": "#dcdccc",
+            "selectionBackground": "#6296f8"
         },
 ```

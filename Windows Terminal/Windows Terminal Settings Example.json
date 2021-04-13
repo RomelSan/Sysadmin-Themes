@@ -253,7 +253,9 @@
             "brightCyan": "#ffd700",
             "brightWhite": "#ffffff",
             "background": "#333333",
-            "foreground": "#ffffff"  
+            "foreground": "#ffffff",
+            "cursorColor": "#dcdccc",
+            "selectionBackground": "#6296f8"
         }  
     ],
 
