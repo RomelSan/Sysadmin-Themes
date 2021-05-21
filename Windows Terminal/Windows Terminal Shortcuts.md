@@ -1,6 +1,8 @@
 # Windows Terminal Shortcuts
-## Open tab in split
+## Open tab in split or window
 To open another profile in a new pane, hold down the Alt key when choosing it from the drop-down menu.
+
+You can now hold Shift and click on a profile in the dropdown menu to open that profile in a new window. 
 
 ## Navigate and Resize
 Hold down Alt and use the cursor keys to switch between active panes from the keyboard.  

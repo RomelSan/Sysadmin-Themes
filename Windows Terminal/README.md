@@ -3,6 +3,8 @@
 1. Click Settings.   
 ![Demo 01](./screenshot.png?raw=true)  
 
+Click "Open JSON file"
+
 The settings are in Json format.
 
 2. Creating a named `cmd` profile with a custom font and theme 
