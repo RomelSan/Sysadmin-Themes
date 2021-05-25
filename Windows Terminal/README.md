@@ -1,13 +1,18 @@
 # Windows Terminal Profiles
+You can open the settings file directly using keyboard shortcuts.  
+Open settings file: `ctrl+shift+,`  
+Also you can take a look at the auto generated file: `ctrl+alt+,`
+
 ## Creating profile
-1. Click Settings.   
+1. Click Settings. 
+
 ![Demo 01](./screenshot.png?raw=true)  
 
 Click "Open JSON file"
 
 The settings are in Json format.
 
-2. Creating a named `cmd` profile with a custom font and theme 
+1. Creating a named `cmd` profile with a custom font and theme 
 ```json
 {
     "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
