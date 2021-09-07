@@ -1,0 +1,26 @@
+* Install rust and rustup
+curl https://sh.rustup.rs -sSf | sh
++ you must logout and login again.
+
+* Clone LSD git
+git clone https://github.com/Peltoche/lsd.git
+
+* Build cargo statically linked
+cd lsd
+cargo build --release --bin lsd --target-dir /home/core/lsd
+
+* Check deps
+ldd lsd
+--------------------------
+
+* If you'd like a 100% static binary, the MUSL libc can be used on Linux.
+* To get support for this target, you use rustup:
+rustup target add x86_64-unknown-linux-musl
+
+* Building with MUSL
+To use this new target, pass the --target flag to Cargo:
+cargo build --release --target x86_64-unknown-linux-musl --bin lsd --target-dir /home/core/lsd
+---
+
++ To install for other toolchains, add the --toolchain flag. For example:
+rustup target add x86_64-unknown-linux-musl --toolchain=nightly

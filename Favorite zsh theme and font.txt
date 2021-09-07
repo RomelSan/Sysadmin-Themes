@@ -1,0 +1,15 @@
+* Best ZSH Theme OhmyZSH.
+Funky
+mikeh
+https://github.com/ohmyzsh/ohmyzsh
+
+* Best NerdFont
+CaskaydiaCove NF (Caskaydia Cove Nerd Font Complete Windows Compatible.ttf)
+https://www.nerdfonts.com
+
+* Best Normal Font
+Cascadia Code PL
+https://github.com/microsoft/cascadia-code
+
+* Best Windows Terminal Theme
+Nord, Core2, Neutron, One Half Dark
