@@ -1,7 +1,7 @@
 # Set up Powerline in PowerShell
 
 Preview:  
-![Demo 01](G:\Windows Folders2\Documents\GitHub\Sysadmin Themes\Windows Terminal\PowerLine for Powershell\screenshot.png)
+![Demo 01](screenshot.png)
 
 ## PowerShell prerequisites
 
