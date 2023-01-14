@@ -7,7 +7,7 @@ There is a utility called **screen** that allows us to resume the sessions.
 Processes running in Screen will continue to run when their window is not visible even if you get disconnected.
 
 ## Install screen
-`sudo apt-get install screen`
+`sudo apt install screen`
 
 ## Check version
 `screen --version`

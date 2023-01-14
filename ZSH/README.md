@@ -4,11 +4,11 @@ Preview - Kitty Portable with Nord theme, ZSH + Oh My ZSH with fino theme, tmux 
 
 ### **Install ZSH**
 ```
-sudo apt-get install zsh
+sudo apt install zsh
 ```
 ### **Add other complements**
 ```
-sudo apt-get install zsh-autosuggestions zsh-syntax-highlighting
+sudo apt install zsh-autosuggestions zsh-syntax-highlighting
 ```
 ### **Check Version**
 ```
@@ -143,14 +143,13 @@ Set theme: `ZSH_THEME="agnoster"`
 ### **Disable Update Prompt**
 In zshrc config, uncomment
 ```
-DISABLE_UPDATE_PROMPT=true
-DISABLE_AUTO_UPDATE=true
+zstyle ':omz:update' mode disabled
 ```
 
 ### **Manual Updates**
 In shell
 ```
-upgrade_oh_my_zsh
+omz update
 ```
 
 ### **Uninstall**

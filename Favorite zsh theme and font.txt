@@ -1,5 +1,5 @@
 * Best ZSH Theme OhmyZSH.
-Funky
+funky
 mikeh
 https://github.com/ohmyzsh/ohmyzsh
 
@@ -13,3 +13,15 @@ https://github.com/microsoft/cascadia-code
 
 * Best Windows Terminal Theme
 Nord, Core2, Neutron, One Half Dark
+
+* Best POSH Themes
+agnoster
+powerlevel10k_rainbow
+nordtron
+tokyo
+tokyonight_storm
+uew
+darkblood
+di4am0nd
+wholespace
+clean-detailed

@@ -1,45 +1,97 @@
 # Set up Powerline in PowerShell
+
 Preview:  
-![Demo 01](./screenshot.png?raw=true)
+![Demo 01](G:\Windows Folders2\Documents\GitHub\Sysadmin Themes\Windows Terminal\PowerLine for Powershell\screenshot.png)
 
 ## PowerShell prerequisites
+
 Install Windows Terminal: https://github.com/microsoft/terminal/releases  
-Install Git for Windows: https://git-scm.com/downloads  
+Install Git for Windows if installing Posh-Git: https://git-scm.com/downloads  
 Install `Cascadia Code PL` Font: https://github.com/microsoft/cascadia-code/releases  
 
-## Using PowerShell, install Posh-Git and Oh-My-Posh:
- * Oh-My-Posh provides theme capabilities for your PowerShell prompt.
- * Posh-Git adds Git status information to your prompt as well as tab-completion for Git 
-```Powershell
-Install-Module posh-git -Scope CurrentUser
-Install-Module oh-my-posh -Scope CurrentUser
+## Optional - Install Terminal Icons
+
+```powershell
+Install-Module terminal-icons -Scope CurrentUser
 ```
+
 Note: To update a module use the command: `Update-Module`
 
-## If you are using PowerShell Core, install PSReadline:
-* PSReadline lets you customize the command line editing environment in PowerShell.
-```Powershell
-Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
+## Installing Oh My Posh:
+
+Open a PowerShell prompt and run the following command:
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
+```
+
+Or install the executable "install-amd64.exe" download from: https://github.com/JanDeDobbeleer/oh-my-posh/releases
+
+Optional: add the full patch to AV exception
+
+```powershell
+(Get-Command oh-my-posh).Source
+```
+
+### Themes - Reference
+
+You can find the themes in the folder indicated by the environment variable `POSH_THEMES_PATH`. For example, you can use
+
+```powershell
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
+```
+
+ for the prompt initialization in PowerShell.
+
+### Get Shell - Reference
+
+If you have no idea which shell you're currently using, Oh My Posh has a utility switch that can tell that to you.
+
+```powershell
+oh-my-posh get shell
 ```
 
 ## Customize your PowerShell prompt
-* Open your PowerShell profile with a code editor:  
-`code $PROFILE`  
-`notepad $PROFILE`  
-`notepad++ $PROFILE`  
-or the text editor of your choice.  
-This is not your Windows Terminal profile.   
+
+Open your PowerShell profile with a code editor:  
+```powershell
+code $PROFILE
+
+notepad $PROFILE
+
+notepad++ $PROFILE
+```
+
+or the text editor of your choice.
+This is not your Windows Terminal profile.
 Your PowerShell profile is a script that runs every time PowerShell starts.
 
-### In your PowerShell profile, add the following to the end of the file:
-```Powershell
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-PoshPrompt -Theme agnoster
+When the above command gives an error, make sure to create the profile first.
+
+```powershell
+New-Item -Path $PROFILE -Type File -Force
+```
+
+Then add the line - You should have this:
+
+```powershell
+# Theme
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/powerlevel10k_rainbow.omp.json" | Invoke-Expression
+
+# Terminal Icons Module
+Import-Module terminal-icons
+```
+
+Reload the profile:
+
+```
+. $PROFILE
 ```
 
 ### Edit Windows Terminal profile:
+
 Open **Windows Terminal** Settings.
+
 ```json
 {
     // Make changes here to the powershell.exe profile.
@@ -47,64 +99,103 @@ Open **Windows Terminal** Settings.
     "name": "Windows PowerShell",
     "commandline": "powershell.exe",
     "fontFace": "Cascadia Code PL",
+    //"cursorShape": "filledBox",
+    "historySize" : 9001,
     "fontSize" : 11,
     "colorScheme" : "One Half Dark",
+    //"startingDirectory": ".",
     "hidden": false
 },
 ```
-Save the file.  
-Done  
 
-#### **Powershell built-in colorScheme:**
+Save the file.  
+Done, start powershell to take a look.
+
+#### Windows Terminal built-in colorScheme:
+
+Other built-in powershell themes to try.
+
+Replace the color scheme in line `"colorScheme" : "One Half Dark",` with one of the following.
+
 ```
+  One Half Dark
+  One Half Light
   Campbell
   Campbell Powershell
   Vintage
-  One Half Dark
-  One Half Light
   Tango Dark
   Tango Light
   Solarized Dark
   Solarized Light
 ```
 
-### Other Stuff
-* List current configuration  
-`Get-PoshContext`
+## Customize POSH
 
-* Oh My Posh Themes to Try:  
-Agnoster  
-Paradox  
-Powerlevel10k-Lean  
-Robbyrussel  
-Pararussel  
+The standard initialization sets Oh My Posh' default theme. This configuration is embedded and thus kept up-to-date with Oh My Posh.
 
-* List Themes Name  
+To set a new config/theme you need to change the `--config` option of the `oh-my-posh init <shell>` line in your `profile` or `.<shell>rc` script (see [prompt](https://ohmyposh.dev/docs/installation/prompt)) and point it to the location of a predefined [theme](https://ohmyposh.dev/docs/themes) or custom configuration.
 
-  `Get-PoshThemes -list`
+There are two possible values the `--config` flag can handle:
 
-* List Themes with Preview  
-`Get-PoshThemes`
+- a path to a local configuration file
+
+```powershell
+oh-my-posh init pwsh --config 'C:/Users/Posh/jandedobbeleer.omp.json' | Invoke-Expression
+```
+
+The Windows and homebrew installers also bundle the **predefined configurations** ([themes](https://ohmyposh.dev/docs/themes)). You can use the following way to reference them directly. This will keep them up-to-date and compatible with future updates
+
+```powershell
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/jandedobbeleer.omp.json" | Invoke-Expression
+```
+
+Once altered, reload your profile for the changes to take effect.
+
+```powershell
+. $PROFILE
+```
+
+### View Themes and changing it
+
+List Themes Name  
+
+```powershell
+Get-PoshThemes -list
+```
+
+List Themes with Preview
+```
+Get-PoshThemes
+```
 
 ### Enable the Prompt
-* Set the desired theme:  
-`Set-PoshPrompt -Theme paradox`
 
+Themes with `minimal` in their names do not require a Nerd Font.
 
+**Set the desired theme:**  
 
-## Updating
-
-To update type:
-
-```
-Update-Module -Name posh-git -Scope CurrentUser
-Update-Module -Name oh-my-posh -Scope CurrentUser
-Update-Module -Name PSReadLine -Scope CurrentUser
+```powershell
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/powerlevel10k_rainbow.omp.json" | Invoke-Expression
 ```
 
+**You can view the themes name with following command:**
 
+```powershell
+ls $env:POSH_THEMES_PATH
+Get-PoshThemes -list
+```
+
+Oh My Posh Themes to Try:
+
+Agnoster
+Paradox
+tokyo
+powerlevel10k_rainbow
+Robbyrussel
+Pararussel  
 
 ### Official Links
+
 https://github.com/microsoft/terminal/releases  
 https://github.com/JanDeDobbeleer/oh-my-posh  
 https://github.com/dahlbyk/posh-git  
