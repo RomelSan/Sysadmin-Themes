@@ -1,8 +1,8 @@
 ## Download
-wget https://github.com/Peltoche/lsd/releases/download/0.19.0/lsd-musl_0.19.0_amd64.deb
+wget https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd-musl_0.23.1_amd64.deb
 
 ## Install
-sudo dpkg -i lsd-musl_0.19.0_amd64.deb
+sudo dpkg -i lsd-musl_0.23.1_amd64.deb
 
 ## To Uninstall
 sudo dpkg --remove lsd-musl
