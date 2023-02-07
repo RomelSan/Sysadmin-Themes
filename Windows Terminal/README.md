@@ -27,6 +27,8 @@ The settings are in Json format.
 },
 ```
 
+You can generate an unique GUID using powershell and type: `New-Guid`
+
 In your code editor should look like:  
 ![Demo 02](./screenshot-code.png?raw=true)
 

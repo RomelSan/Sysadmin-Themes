@@ -28,7 +28,7 @@ Using Kitty portable on Windows.
 2. Use any Kitty theme you want. My favorites are: Nord Theme and Core Theme.
 
 ### Customizing Linux Shell
-Tested on Ubuntu Server 20.04 LTS
+Tested on Ubuntu Server 22.04 LTS
 1. Do **screen** settings. `Inside screen folder`
 2. Do **tmux** settings. `Inside tmux folder`.  
 If you are going powerline then at the end apply the Nord Theme `tmux-nord-v2-powerline.conf` save as `.tmux.conf` inside your home folder.
