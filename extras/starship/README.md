@@ -22,7 +22,7 @@ Add the following to the end of your PowerShell configuration (find it by runnin
 
 ```powershell
 $ENV:STARSHIP_CONFIG = "$HOME\.starship\starship.toml"
-$ENV:STARSHIP_DISTRO = "者 core "
+$ENV:STARSHIP_DISTRO = "󰖳 core "
 Invoke-Expression (&starship init powershell)
 ```
 
